@@ -23,7 +23,6 @@ public class Star {
         Random generator = new Random();
         speed = generator.nextInt(10);
 
-
         x = generator.nextInt(maxX);
         y = generator.nextInt(maxY);
     }
@@ -34,7 +33,6 @@ public class Star {
         x -= speed;
 
         if (x < 0) {
-
             x = maxX;
             Random generator = new Random();
             y = generator.nextInt(maxY);

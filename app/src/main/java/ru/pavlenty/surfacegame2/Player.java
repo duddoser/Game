@@ -18,7 +18,6 @@ public class Player {
     private final int MIN_SPEED = 1;
     private final int MAX_SPEED = 20;
 
-    private Rect detectCollision;
 
     public Player(Context context, int screenX, int screenY) {
         x = 75;
@@ -28,9 +27,6 @@ public class Player {
         maxY = screenY - bitmap.getHeight();
         minY = 0;
         boosting = false;
-
-
-        detectCollision =  new Rect(x, y, bitmap.getWidth(), bitmap.getHeight());
     }
 
     public void setBoosting() {
@@ -65,17 +61,6 @@ public class Player {
             y = maxY;
         }
 
-
-        detectCollision.left = x;
-        detectCollision.top = y;
-        detectCollision.right = x + bitmap.getWidth();
-        detectCollision.bottom = y + bitmap.getHeight();
-
-    }
-
-
-    public Rect getDetectCollision() {
-        return detectCollision;
     }
 
     public Bitmap getBitmap() {
